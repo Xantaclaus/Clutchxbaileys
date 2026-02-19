@@ -1,4 +1,7 @@
 import makeWASocket from './Socket/index'
+import { showClutchBanner } from "./banner"
+
+showClutchBanner()
 
 export * from '../WAProto/index.js'
 export * from './Utils/index'
