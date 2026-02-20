@@ -97,7 +97,11 @@ export const encodeBigEndian = (e: number, t = 4) => {
 }
 
 export const toNumber = (t: Long | number | null | undefined): number =>
-	typeof t === 'object' && t ? ('toNumber' in t ? t.toNumber() : (t as Long).low) : t || 0
+	Number(
+  typeof t === 'object' && t
+    ? ('toNumber' in t ? (t as any).toNumber() : (t as any).low)
+    : t || 0
+)
 
 /** unix timestamp of a date in seconds */
 export const unixTimestampSeconds = (date: Date = new Date()) => Math.floor(date.getTime() / 1000)
