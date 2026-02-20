@@ -1,14 +1,17 @@
 {
-  "name": "@whiskeysockets/baileys",
-  "version": "7.0.0",
-  "main": "./lib/index.cjs",
-  "module": "./lib/index.js",
-  "types": "./lib/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./lib/index.cjs",
-      "import": "./lib/index.js"
-    }
+  "name": "@clutchx/baileys",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
   },
-  "type": "module"
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0",
+    "pino": "^9.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
 }
